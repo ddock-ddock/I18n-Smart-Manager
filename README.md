@@ -1,4 +1,4 @@
-# I18n Smart Manager
+# I18n Smart DDOCK
 
 한글 텍스트를 자동으로 추출하고 i18n 키로 변환하여 다국어 지원을 쉽게 만들어주는 VSCode 확장프로그램입니다.
 
@@ -41,7 +41,7 @@
 
 ### 1. 확장 설치
 
-VSCode 익스텐션에서 "I18n Smart Manager"를 검색하여 설치하세요.
+VSCode 익스텐션에서 "I18n Smart DDOCK"를 검색하여 설치하세요.
 
 ### 2. 모니터링 시작
 
@@ -68,9 +68,9 @@ VSCode 익스텐션에서 "I18n Smart Manager"를 검색하여 설치하세요.
 
 ```json
 {
-  "I18nSmartManager.locales.outputPath": "", // locales 파일 저장 경로
-  "I18nSmartManager.locales.enabledLanguages": ["ko", "en", "zh", "ja"], // 활성화할 언어
-  "I18nSmartManager.locales.filenamePattern": "locales.{language}.json" // 파일명 패턴
+  "I18nSmartDDOCK.locales.outputPath": "", // locales 파일 저장 경로
+  "I18nSmartDDOCK.locales.enabledLanguages": ["ko", "en", "zh", "ja"], // 활성화할 언어
+  "I18nSmartDDOCK.locales.filenamePattern": "locales.{language}.json" // 파일명 패턴
 }
 ```
 
@@ -78,7 +78,7 @@ VSCode 익스텐션에서 "I18n Smart Manager"를 검색하여 설치하세요.
 
 ```json
 {
-  "I18nSmartManager.keyGeneration.customFunction": "text => text.replace(/\\s+/g, '_').replace(/\\./g, '#dot#').replace(/\\\\(.)/g, '\\\\\\\\$1').replace(/\\[/g, '#lb#').replace(/\\]/g, '#rb#')"
+  "I18nSmartDDOCK.keyGeneration.customFunction": "text => text.replace(/\\s+/g, '_').replace(/\\./g, '#dot#').replace(/\\\\(.)/g, '\\\\\\\\$1').replace(/\\[/g, '#lb#').replace(/\\]/g, '#rb#')"
 }
 ```
 
@@ -86,7 +86,7 @@ VSCode 익스텐션에서 "I18n Smart Manager"를 검색하여 설치하세요.
 
 ```json
 {
-  "I18nSmartManager.translation.deeplApiKey": "your-deepl-api-key"
+  "I18nSmartDDOCK.translation.deeplApiKey": "your-deepl-api-key"
 }
 ```
 
@@ -96,48 +96,48 @@ VSCode 익스텐션에서 "I18n Smart Manager"를 검색하여 설치하세요.
 
 ```json
 {
-  "I18nSmartManager.spreadsheet.googleApiKey": "your-google-api-key"
+  "I18nSmartDDOCK.spreadsheet.googleApiKey": "your-google-api-key"
 }
 ```
 
 # Google API Key 설정
 
-<img width="1132" height="624" alt="Image" src="https://raw.githubusercontent.com/ddock-ddock/I18n-Smart-Manager/main/images/google-api-key.png" />
+<img width="1132" height="624" alt="Image" src="https://raw.githubusercontent.com/ddock-ddock/i18n-smart-ddock/main/images/google-api-key.png" />
 
 #### - Google Service Account 인증 정보
 
 ```json
 {
-  "I18nSmartManager.spreadsheet.serviceAccountCredentials": { your json }
+  "I18nSmartDDOCK.spreadsheet.serviceAccountCredentials": { your json }
 }
 ```
 
 # Service Account 인증 정보
 
-<img height="330" alt="Image" src="https://raw.githubusercontent.com/ddock-ddock/I18n-Smart-Manager/main/images/service-account-credentials-1.png" /> 
-<img width="600" alt="Image" src="https://raw.githubusercontent.com/ddock-ddock/I18n-Smart-Manager/main/images/service-account-credentials-2.png" />
+<img height="330" alt="Image" src="https://raw.githubusercontent.com/ddock-ddock/i18n-smart-ddock/main/images/service-account-credentials-1.png" /> 
+<img width="600" alt="Image" src="https://raw.githubusercontent.com/ddock-ddock/i18n-smart-ddock/main/images/service-account-credentials-2.png" />
 
 #### - 구글 스프레드시트 ID
 
 ```json
 {
-  "I18nSmartManager.spreadsheet.spreadsheetId": "your-spreadsheet-id"
+  "I18nSmartDDOCK.spreadsheet.spreadsheetId": "your-spreadsheet-id"
 }
 ```
 
 # Spreadsheet ID
 
-<img width="859" height="168" alt="Image" src="https://raw.githubusercontent.com/ddock-ddock/I18n-Smart-Manager/main/images/spreadsheet-id.png" />
+<img width="859" height="168" alt="Image" src="https://raw.githubusercontent.com/ddock-ddock/i18n-smart-ddock/main/images/spreadsheet-id.png" />
 
 ## 사용법
 
 ### 명령어 팔레트
 
-- `Ctrl+Shift+P` → "I18n Smart Manager" 검색하여 사용 가능한 명령어 확인
+- `Ctrl+Shift+P` → "I18n Smart DDOCK" 검색하여 사용 가능한 명령어 확인
 
 ### 사이드바 사용
 
-1. **I18n Smart Manager** 패널에서 모든 기능 접근
+1. **I18n Smart DDOCK** 패널에서 모든 기능 접근
 2. 감지된 텍스트 목록 확인
 3. 개별 텍스트 제외/포함 설정
 4. i18n 변환 실행
@@ -190,7 +190,7 @@ text
 
 ```json
 {
-  "I18nSmartManager.locales.filenamePattern": "locales.{language}.json" // 기본값
+  "I18nSmartDDOCK.locales.filenamePattern": "locales.{language}.json" // 기본값
 }
 ```
 
@@ -228,10 +228,10 @@ text
 
 ```json
 {
-  "I18nSmartManager.highlighting.koreanTextColor": "#ffe44c", // 한글 텍스트 색상
-  "I18nSmartManager.highlighting.i18nTextColor": "#90EE90", // i18n 텍스트 색상
-  "I18nSmartManager.highlighting.koreanTextDecoration": "underline wavy", // 한글 텍스트 스타일
-  "I18nSmartManager.highlighting.i18nTextDecoration": "underline" // i18n 텍스트 스타일
+  "I18nSmartDDOCK.highlighting.koreanTextColor": "#ffe44c", // 한글 텍스트 색상
+  "I18nSmartDDOCK.highlighting.i18nTextColor": "#90EE90", // i18n 텍스트 색상
+  "I18nSmartDDOCK.highlighting.koreanTextDecoration": "underline wavy", // 한글 텍스트 스타일
+  "I18nSmartDDOCK.highlighting.i18nTextDecoration": "underline" // i18n 텍스트 스타일
 }
 ```
 

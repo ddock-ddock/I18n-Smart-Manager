@@ -1,6 +1,7 @@
 {
-  "name": "i18n-smart-manager",
-  "displayName": "I18n Smart Manager",
+  "name": "i18n-smart-ddock",
+  "icon": "images/ddock.png",
+  "displayName": "I18n Smart DDOCK",
   "description": "Korean text extraction and i18n management extension",
   "version": "0.0.6",
   "publisher": "ddock",
@@ -10,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ddock-ddock/I18n-Smart-Manager.git"
+    "url": "https://github.com/ddock-ddock/i18n-smart-ddock.git"
   },
   "engines": {
     "vscode": "^1.83.0"
@@ -27,81 +28,81 @@
   "contributes": {
     "commands": [
       {
-        "command": "i18n-smart-manager.start",
-        "title": "I18n Smart Manager: 모니터링 시작",
-        "description": "I18n Smart Manager: Start monitoring Korean texts",
+        "command": "i18n-smart-ddock.start",
+        "title": "I18n Smart DDOCK: 모니터링 시작",
+        "description": "I18n Smart DDOCK: Start monitoring Korean texts",
         "icon": "$(eye)"
       },
       {
-        "command": "i18n-smart-manager.stop",
-        "title": "I18n Smart Manager: 모니터링 중지",
-        "description": "I18n Smart Manager: Stop monitoring Korean texts",
+        "command": "i18n-smart-ddock.stop",
+        "title": "I18n Smart DDOCK: 모니터링 중지",
+        "description": "I18n Smart DDOCK: Stop monitoring Korean texts",
         "icon": "$(eye-closed)"
       },
       {
-        "command": "i18n-smart-manager.refresh",
-        "title": "I18n Smart Manager: 새로고침",
-        "description": "I18n Smart Manager: Refresh Korean text detection",
+        "command": "i18n-smart-ddock.refresh",
+        "title": "I18n Smart DDOCK: 새로고침",
+        "description": "I18n Smart DDOCK: Refresh Korean text detection",
         "icon": "$(refresh)"
       },
       {
-        "command": "i18n-smart-manager.convertAll",
-        "title": "I18n Smart Manager: 전체 변환",
-        "description": "I18n Smart Manager: Convert all Korean texts to i18n keys",
+        "command": "i18n-smart-ddock.convertAll",
+        "title": "I18n Smart DDOCK: 전체 변환",
+        "description": "I18n Smart DDOCK: Convert all Korean texts to i18n keys",
         "icon": "$(wand)"
       },
       {
-        "command": "i18n-smart-manager.exclude",
-        "title": "I18n Smart Manager: 제외하기",
-        "description": "I18n Smart Manager: Exclude text from conversion",
+        "command": "i18n-smart-ddock.exclude",
+        "title": "I18n Smart DDOCK: 제외하기",
+        "description": "I18n Smart DDOCK: Exclude text from conversion",
         "icon": "$(x)"
       },
       {
-        "command": "i18n-smart-manager.include",
-        "title": "I18n Smart Manager: 포함하기",
-        "description": "I18n Smart Manager: Include text in conversion",
+        "command": "i18n-smart-ddock.include",
+        "title": "I18n Smart DDOCK: 포함하기",
+        "description": "I18n Smart DDOCK: Include text in conversion",
         "icon": "$(check)"
       },
       {
-        "command": "i18n-smart-manager.goToText",
-        "title": "I18n Smart Manager: 위치로 이동",
-        "description": "I18n Smart Manager: Go to text location",
+        "command": "i18n-smart-ddock.goToText",
+        "title": "I18n Smart DDOCK: 위치로 이동",
+        "description": "I18n Smart DDOCK: Go to text location",
         "icon": "$(location)"
       },
       {
-        "command": "i18n-smart-manager.previewConversion",
-        "title": "I18n Smart Manager: 변환 미리보기",
-        "description": "I18n Smart Manager: Preview conversion results",
+        "command": "i18n-smart-ddock.previewConversion",
+        "title": "I18n Smart DDOCK: 변환 미리보기",
+        "description": "I18n Smart DDOCK: Preview conversion results",
         "icon": "$(eye)"
       },
       {
-        "command": "i18n-smart-manager.clearPreview",
-        "title": "I18n Smart Manager: 미리보기 제거",
-        "description": "I18n Smart Manager: Clear conversion preview",
+        "command": "i18n-smart-ddock.clearPreview",
+        "title": "I18n Smart DDOCK: 미리보기 제거",
+        "description": "I18n Smart DDOCK: Clear conversion preview",
         "icon": "$(x)"
       },
       {
-        "command": "i18n-smart-manager.addSelected",
-        "title": "I18n Smart Manager: 선택된 텍스트 추가",
-        "description": "I18n Smart Manager: Add selected text to pending list",
+        "command": "i18n-smart-ddock.addSelected",
+        "title": "I18n Smart DDOCK: 선택된 텍스트 추가",
+        "description": "I18n Smart DDOCK: Add selected text to pending list",
         "icon": "$(add)"
       },
       {
-        "command": "i18n-smart-manager.generateLocales",
-        "title": "I18n Smart Manager: locales 파일 생성",
-        "description": "I18n Smart Manager: Generate locales files",
+        "command": "i18n-smart-ddock.generateLocales",
+        "title": "I18n Smart DDOCK: locales 파일 생성",
+        "description": "I18n Smart DDOCK: Generate locales files",
         "icon": "$(file-code)"
       },
       {
-        "command": "i18n-smart-manager.uploadToSpreadsheet",
-        "title": "I18n Smart Manager: 구글 시트 업로드",
-        "description": "I18n Smart Manager: Upload locales files to Google Sheets",
+        "command": "i18n-smart-ddock.uploadToSpreadsheet",
+        "title": "I18n Smart DDOCK: 구글 시트 업로드",
+        "description": "I18n Smart DDOCK: Upload locales files to Google Sheets",
         "icon": "$(go-to-file)"
       }
     ],
     "keybindings": [
       {
-        "command": "i18n-smart-manager.addSelected",
+        "command": "i18n-smart-ddock.addSelected",
         "key": "ctrl+shift+a",
         "when": "editorTextFocus"
       }
@@ -109,126 +110,126 @@
     "menus": {
       "commandPalette": [
         {
-          "command": "i18n-smart-manager.exclude",
+          "command": "i18n-smart-ddock.exclude",
           "when": "false"
         },
         {
-          "command": "i18n-smart-manager.include",
+          "command": "i18n-smart-ddock.include",
           "when": "false"
         },
         {
-          "command": "i18n-smart-manager.goToText",
+          "command": "i18n-smart-ddock.goToText",
           "when": "false"
         }
       ],
       "view/title": [
         {
-          "command": "i18n-smart-manager.refresh",
-          "when": "view == I18nSmartManager",
+          "command": "i18n-smart-ddock.refresh",
+          "when": "view == I18nSmartDDOCK",
           "group": "navigation@1"
         },
         {
-          "command": "i18n-smart-manager.start",
-          "when": "view == I18nSmartManager && !I18nSmartManager.isActive",
+          "command": "i18n-smart-ddock.start",
+          "when": "view == I18nSmartDDOCK && !I18nSmartDDOCK.isActive",
           "group": "navigation@2"
         },
         {
-          "command": "i18n-smart-manager.stop",
-          "when": "view == I18nSmartManager && I18nSmartManager.isActive",
+          "command": "i18n-smart-ddock.stop",
+          "when": "view == I18nSmartDDOCK && I18nSmartDDOCK.isActive",
           "group": "navigation@3"
         },
         {
-          "command": "i18n-smart-manager.generateLocales",
-          "when": "view == I18nSmartManager && I18nSmartManager.isActive",
+          "command": "i18n-smart-ddock.generateLocales",
+          "when": "view == I18nSmartDDOCK && I18nSmartDDOCK.isActive",
           "group": "navigation@4"
         },
         {
-          "command": "i18n-smart-manager.convertAll",
-          "when": "view == I18nSmartManager && I18nSmartManager.isActive",
+          "command": "i18n-smart-ddock.convertAll",
+          "when": "view == I18nSmartDDOCK && I18nSmartDDOCK.isActive",
           "group": "navigation@5"
         },
         {
-          "command": "i18n-smart-manager.uploadToSpreadsheet",
-          "when": "view == I18nSmartManager && !I18nSmartManager.isActive",
+          "command": "i18n-smart-ddock.uploadToSpreadsheet",
+          "when": "view == I18nSmartDDOCK && !I18nSmartDDOCK.isActive",
           "group": "navigation@6"
         }
       ],
       "view/item/context": [
         {
-          "command": "i18n-smart-manager.exclude",
-          "when": "view == I18nSmartManager && viewItem == korean-text",
+          "command": "i18n-smart-ddock.exclude",
+          "when": "view == I18nSmartDDOCK && viewItem == korean-text",
           "group": "inline"
         },
         {
-          "command": "i18n-smart-manager.include",
-          "when": "view == I18nSmartManager && viewItem == excluded-text",
+          "command": "i18n-smart-ddock.include",
+          "when": "view == I18nSmartDDOCK && viewItem == excluded-text",
           "group": "inline"
         },
         {
-          "command": "i18n-smart-manager.goToText",
-          "when": "view == I18nSmartManager && (viewItem == korean-text || viewItem == i18n-text)",
+          "command": "i18n-smart-ddock.goToText",
+          "when": "view == I18nSmartDDOCK && (viewItem == korean-text || viewItem == i18n-text)",
           "group": "inline"
         }
       ],
       "editor/context": [
         {
-          "command": "i18n-smart-manager.addSelected",
+          "command": "i18n-smart-ddock.addSelected",
           "when": "editorTextFocus",
-          "group": "i18n-smart-manager"
+          "group": "i18n-smart-ddock"
         }
       ]
     },
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "i18n-smart-manager",
-          "title": "I18n Smart Manager",
+          "id": "i18n-smart-ddock",
+          "title": "I18n Smart DDOCK",
           "icon": "$(globe)"
         }
       ]
     },
     "views": {
-      "i18n-smart-manager": [
+      "i18n-smart-ddock": [
         {
-          "id": "I18nSmartManager",
-          "name": "I18n Smart Manager"
+          "id": "I18nSmartDDOCK",
+          "name": "I18n Smart DDOCK"
         }
       ]
     },
     "configuration": {
-      "title": "I18n Smart Manager",
+      "title": "I18n Smart DDOCK",
       "properties": {
-        "I18nSmartManager.keyGeneration.customFunction": {
+        "I18nSmartDDOCK.keyGeneration.customFunction": {
           "type": "string",
           "default": "text => text.replace(/\\s+/g, '_').replace(/\\./g, '#dot#').replace(/\\\\(.)/g, '\\\\\\\\$1').replace(/\\[/g, '#lb#').replace(/\\]/g, '#rb#').replace(/'/g, '#sq#').replace(/\"/g, '#dq#')",
           "description": "키 생성 커스텀 함수 (JavaScript 코드). 'text' 매개변수를 받아 변환된 키를 반환해야 합니다."
         },
-        "I18nSmartManager.translation.deeplApiKey": {
+        "I18nSmartDDOCK.translation.deeplApiKey": {
           "type": "string",
           "default": "",
           "description": "DeepL API 키"
         },
-        "I18nSmartManager.locales.outputPath": {
+        "I18nSmartDDOCK.locales.outputPath": {
           "type": "string",
           "default": "",
           "description": "locales 파일 저장 경로 (비어있으면 프로젝트 루트에 저장)"
         },
-        "I18nSmartManager.spreadsheet.googleApiKey": {
+        "I18nSmartDDOCK.spreadsheet.googleApiKey": {
           "type": "string",
           "default": "",
           "description": "구글 API 키 (스프레드시트 접근용)"
         },
-        "I18nSmartManager.spreadsheet.serviceAccountCredentials": {
+        "I18nSmartDDOCK.spreadsheet.serviceAccountCredentials": {
           "type": "object",
           "default": null,
           "description": "Google Service Account 인증 정보 (JSON 형태)"
         },
-        "I18nSmartManager.spreadsheet.spreadsheetId": {
+        "I18nSmartDDOCK.spreadsheet.spreadsheetId": {
           "type": "string",
           "default": "",
           "description": "구글 스프레드시트 ID"
         },
-        "I18nSmartManager.locales.enabledLanguages": {
+        "I18nSmartDDOCK.locales.enabledLanguages": {
           "type": "array",
           "items": {
             "type": "string",
@@ -247,17 +248,17 @@
           ],
           "description": "활성화할 언어들 (한국어, 영어, 중국어, 일본어 중 선택)"
         },
-        "I18nSmartManager.highlighting.koreanTextColor": {
+        "I18nSmartDDOCK.highlighting.koreanTextColor": {
           "type": "string",
           "default": "#ffe44c",
           "description": "Korean text highlight color"
         },
-        "I18nSmartManager.highlighting.i18nTextColor": {
+        "I18nSmartDDOCK.highlighting.i18nTextColor": {
           "type": "string",
           "default": "#90EE90",
           "description": "i18n text highlight color"
         },
-        "I18nSmartManager.highlighting.koreanTextDecoration": {
+        "I18nSmartDDOCK.highlighting.koreanTextDecoration": {
           "type": "string",
           "default": "underline wavy",
           "enum": [
@@ -269,7 +270,7 @@
           ],
           "description": "Korean text decoration style"
         },
-        "I18nSmartManager.highlighting.i18nTextDecoration": {
+        "I18nSmartDDOCK.highlighting.i18nTextDecoration": {
           "type": "string",
           "default": "underline",
           "enum": [
@@ -281,7 +282,7 @@
           ],
           "description": "i18n text decoration style"
         },
-        "I18nSmartManager.locales.filenamePattern": {
+        "I18nSmartDDOCK.locales.filenamePattern": {
           "type": "string",
           "default": "locales.{language}.json",
           "description": "로케일 파일명 패턴 (사용 가능한 변수: {language}, {namespace}). 예: locales-{namespace}.{language}.json, {language}/locales.json"

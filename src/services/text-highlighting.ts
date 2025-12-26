@@ -6,7 +6,7 @@ class TextHighlightingService {
 
   // 설정에서 색상과 스타일 가져오기
   private getHighlightingConfig() {
-    const config = vscode.workspace.getConfiguration('I18nSmartManager.highlighting');
+    const config = vscode.workspace.getConfiguration('I18nSmartDDOCK.highlighting');
 
     return {
       koreanTextColor: config.get<string>('koreanTextColor', '#ffe44c'),

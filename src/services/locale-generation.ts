@@ -248,7 +248,7 @@ class LocalesGenerationService {
       return outputPath;
     }
 
-    const config = vscode.workspace.getConfiguration('I18nSmartManager.locales');
+    const config = vscode.workspace.getConfiguration('I18nSmartDDOCK.locales');
     const customPath = config.get<string>('outputPath', '');
     const filenamePattern = config.get<string>('filenamePattern', 'locales.{language}.json');
 
@@ -405,7 +405,7 @@ class LocalesGenerationService {
     const fileName = targetPath.split(/[\\/]/).pop(); // 파일명만 추출
 
     // 파일명 패턴 설정 확인
-    const config = vscode.workspace.getConfiguration('I18nSmartManager.locales');
+    const config = vscode.workspace.getConfiguration('I18nSmartDDOCK.locales');
     const filenamePattern = config.get<string>('filenamePattern', 'locales.{language}.json');
 
     const namespaceText = this.currentNamespace ? ` (${this.currentNamespace} 네임스페이스)` : ' (루트 레벨)';
@@ -508,7 +508,7 @@ class LocalesGenerationService {
     ];
 
     // 설정에서 활성화된 언어들 가져오기
-    const config = vscode.workspace.getConfiguration('I18nSmartManager.locales');
+    const config = vscode.workspace.getConfiguration('I18nSmartDDOCK.locales');
     const enabledLanguages = config.get<string[]>('enabledLanguages', ['ko', 'en', 'ja']);
 
     // 활성화된 언어들만 필터링
@@ -562,7 +562,7 @@ class LocalesGenerationService {
           // 설정 페이지 열기
           await vscode.commands.executeCommand(
             'workbench.action.openSettings',
-            'I18nSmartManager.locales.enabledLanguages',
+            'I18nSmartDDOCK.locales.enabledLanguages',
           );
           return;
         }
@@ -601,7 +601,7 @@ class LocalesGenerationService {
 
   // DeepL로 번역과 함께 locales 파일 생성 (중복 번역 방지 개선)
   private async generateLocalesWithDeepL(fileType: FileType, texts: string[], language: string): Promise<void> {
-    const config = vscode.workspace.getConfiguration('I18nSmartManager.translation');
+    const config = vscode.workspace.getConfiguration('I18nSmartDDOCK.translation');
     const apiKey = config.get<string>('deeplApiKey', '');
 
     if (!apiKey) {
@@ -612,7 +612,7 @@ class LocalesGenerationService {
       );
 
       if (result === '설정 열기') {
-        await vscode.commands.executeCommand('workbench.action.openSettings', 'I18nSmartManager.translation');
+        await vscode.commands.executeCommand('workbench.action.openSettings', 'I18nSmartDDOCK.translation');
       }
       return;
     }
@@ -696,11 +696,11 @@ class LocalesGenerationService {
   private async generateAllLanguages(fileType: FileType, texts: string[], languages?: string[]): Promise<void> {
     // 언어 목록이 제공되지 않으면 설정에서 활성화된 언어들 사용
     if (!languages) {
-      const config = vscode.workspace.getConfiguration('I18nSmartManager.locales');
+      const config = vscode.workspace.getConfiguration('I18nSmartDDOCK.locales');
       languages = config.get<string[]>('enabledLanguages', ['ko', 'en', 'ja']);
     }
 
-    const config = vscode.workspace.getConfiguration('I18nSmartManager.translation');
+    const config = vscode.workspace.getConfiguration('I18nSmartDDOCK.translation');
     const deeplKey = config.get<string>('deeplApiKey', '');
 
     // 번역이 필요한 언어가 있는지 확인
@@ -715,9 +715,9 @@ class LocalesGenerationService {
       );
 
       if (result === '설정 열기') {
-        await vscode.commands.executeCommand('workbench.action.openSettings', 'I18nSmartManager.translation');
+        await vscode.commands.executeCommand('workbench.action.openSettings', 'I18nSmartDDOCK.translation');
         // 설정 후 다시 확인
-        const newConfig = vscode.workspace.getConfiguration('I18nSmartManager.translation');
+        const newConfig = vscode.workspace.getConfiguration('I18nSmartDDOCK.translation');
         const newApiKey = newConfig.get<string>('deeplApiKey', '');
 
         if (newApiKey) {
@@ -810,7 +810,7 @@ class LocalesGenerationService {
                   increment: 0,
                 });
 
-                const config = vscode.workspace.getConfiguration('I18nSmartManager.translation');
+                const config = vscode.workspace.getConfiguration('I18nSmartDDOCK.translation');
                 const apiKey = config.get<string>('deeplApiKey', '');
 
                 // 번역 진행 상황을 더 자세히 표시 (필터링된 텍스트만)

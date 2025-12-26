@@ -4,28 +4,28 @@ import { I18nItem } from '../providers/i18n-item';
 
 export function registerTextManagementCommands(context: vscode.ExtensionContext): void {
   // 텍스트 제외 명령어 등록
-  const excludeCommand = vscode.commands.registerCommand('i18n-smart-manager.exclude', (item: any) => {
+  const excludeCommand = vscode.commands.registerCommand('i18n-smart-ddock.exclude', (item: any) => {
     if (item.type === 'korean') {
       stateManager.getTreeDataProvider().excludeText(item);
     }
   });
 
   // 텍스트 포함 명령어 등록
-  const includeCommand = vscode.commands.registerCommand('i18n-smart-manager.include', (item: any) => {
+  const includeCommand = vscode.commands.registerCommand('i18n-smart-ddock.include', (item: any) => {
     if (item.type === 'korean') {
       stateManager.getTreeDataProvider().includeText(item);
     }
   });
 
   // 텍스트 위치로 이동 명령어 등록
-  const goToTextCommand = vscode.commands.registerCommand('i18n-smart-manager.goToText', (item: any) => {
+  const goToTextCommand = vscode.commands.registerCommand('i18n-smart-ddock.goToText', (item: any) => {
     if (item.type === 'korean' || item.type === 'i18n') {
       goToTextLocation(item);
     }
   });
 
   // 선택된 텍스트를 pending에 추가하는 명령어 등록
-  const addSelectedCommand = vscode.commands.registerCommand('i18n-smart-manager.addSelected', () => {
+  const addSelectedCommand = vscode.commands.registerCommand('i18n-smart-ddock.addSelected', () => {
     addSelectedTextToPending();
   });
 

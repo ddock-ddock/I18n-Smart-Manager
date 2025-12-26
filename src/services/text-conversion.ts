@@ -443,7 +443,7 @@ class TextConversionService {
 
   // 텍스트를 i18n 키로 변환하는 함수 (커스텀 함수 사용)
   convertToI18nKey(text: string): string {
-    const config = vscode.workspace.getConfiguration('I18nSmartManager.keyGeneration');
+    const config = vscode.workspace.getConfiguration('I18nSmartDDOCK.keyGeneration');
     const customFunction = config.get<string>(
       'customFunction',
       "text => text.replace(/\\s+/g, '_').replace(/\\./g, '#dot#').replace(/\\\\(.)/g, '\\\\\\\\$1').replace(/\\[/g, '#lb#').replace(/\\]/g, '#rb#').replace(/'/g, '#sq#').replace(/\"/g, '#dq#')",

@@ -74,7 +74,7 @@ export class I18nTreeDataProvider implements vscode.TreeDataProvider<I18nItem> {
         treeItem.tooltip = `Korean text: ${item.text}${item.range ? ` (${item.range.start}-${item.range.end})` : ''}`;
         treeItem.contextValue = 'korean-text';
         treeItem.command = {
-          command: 'i18n-smart-manager.goToText',
+          command: 'i18n-smart-ddock.goToText',
           title: 'Go to Text',
           arguments: [treeItem],
         };
@@ -88,7 +88,7 @@ export class I18nTreeDataProvider implements vscode.TreeDataProvider<I18nItem> {
         treeItem.tooltip = `i18n applied: ${item.text}${item.range ? ` (${item.range.start}-${item.range.end})` : ''}`;
         treeItem.contextValue = 'i18n-text';
         treeItem.command = {
-          command: 'i18n-smart-manager.goToText',
+          command: 'i18n-smart-ddock.goToText',
           title: 'Go to Text',
           arguments: [treeItem],
         };
@@ -103,7 +103,7 @@ export class I18nTreeDataProvider implements vscode.TreeDataProvider<I18nItem> {
     this.refresh();
 
     // 컨텍스트 키 설정
-    vscode.commands.executeCommand('setContext', 'I18nSmartManager.isActive', active);
+    vscode.commands.executeCommand('setContext', 'I18nSmartDDOCK.isActive', active);
   }
 
   getActive(): boolean {
