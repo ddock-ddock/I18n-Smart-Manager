@@ -3,10 +3,14 @@
   "displayName": "I18n Smart Manager",
   "description": "Korean text extraction and i18n management extension",
   "version": "0.0.6",
-  "publisher": "hyen",
+  "publisher": "ddock",
+  "author": {
+    "name": "hyen",
+    "url": "https://github.com/HN816"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/HN816/i18n-smart-manager.git"
+    "url": "https://github.com/ddock-ddock/I18n-Smart-Manager.git"
   },
   "engines": {
     "vscode": "^1.83.0"

@@ -102,7 +102,7 @@ VSCode 익스텐션에서 "I18n Smart Manager"를 검색하여 설치하세요.
 
 # Google API Key 설정
 
-<img width="1132" height="624" alt="Image" src="https://raw.githubusercontent.com/HN816/i18n-smart-manager/main/images/google-api-key.png" />
+<img width="1132" height="624" alt="Image" src="https://raw.githubusercontent.com/ddock-ddock/I18n-Smart-Manager/main/images/google-api-key.png" />
 
 #### - Google Service Account 인증 정보
 
@@ -114,8 +114,8 @@ VSCode 익스텐션에서 "I18n Smart Manager"를 검색하여 설치하세요.
 
 # Service Account 인증 정보
 
-<img height="330" alt="Image" src="https://raw.githubusercontent.com/HN816/i18n-smart-manager/main/images/service-account-credentials-1.png" /> 
-<img width="600" alt="Image" src="https://raw.githubusercontent.com/HN816/i18n-smart-manager/main/images/service-account-credentials-2.png" />
+<img height="330" alt="Image" src="https://raw.githubusercontent.com/ddock-ddock/I18n-Smart-Manager/main/images/service-account-credentials-1.png" /> 
+<img width="600" alt="Image" src="https://raw.githubusercontent.com/ddock-ddock/I18n-Smart-Manager/main/images/service-account-credentials-2.png" />
 
 #### - 구글 스프레드시트 ID
 
@@ -127,7 +127,7 @@ VSCode 익스텐션에서 "I18n Smart Manager"를 검색하여 설치하세요.
 
 # Spreadsheet ID
 
-<img width="859" height="168" alt="Image" src="https://raw.githubusercontent.com/HN816/i18n-smart-manager/main/images/spreadsheet-id.png" />
+<img width="859" height="168" alt="Image" src="https://raw.githubusercontent.com/ddock-ddock/I18n-Smart-Manager/main/images/spreadsheet-id.png" />
 
 ## 사용법
 
