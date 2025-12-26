@@ -3,7 +3,7 @@
   "icon": "images/ddock.png",
   "displayName": "I18n Smart DDOCK",
   "description": "Korean text extraction and i18n management extension",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "publisher": "ddock",
   "author": {
     "name": "hyen",
